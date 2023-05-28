@@ -15,7 +15,6 @@ const Order = () => {
     const [tabIndex, setTabIndex] = useState(initialIndex)
     const [menu] = useMenu();
     
-    console.log(category);
     const desserts = menu.filter(item => item.category === 'dessert');
     const soups = menu.filter(item => item.category === 'soup');
     const salads = menu.filter(item => item.category === 'salad');
@@ -31,11 +30,15 @@ const Order = () => {
             <Cover img={orderCover} title={'Order Food'}></Cover>
             <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                 <TabList>
+                    <div className='tabs font-bold'>
+                    <div className="tab tab-bordered tab-md tab-active space-x-12">
                     <Tab>Salad</Tab>
                     <Tab>Pizza</Tab>
                     <Tab>Soup</Tab>
                     <Tab>Dessert</Tab>
                     <Tab>Drinks</Tab>
+                    </div>
+                    </div>
                     
                 </TabList>
                 <TabPanel>
