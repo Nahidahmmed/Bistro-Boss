@@ -13,7 +13,7 @@ const Login = () => {
     const navigate = useNavigate();
     const loacation = useLocation();
 
-    const from = loacation.state?.from?.pathname || "/;"
+    const from = loacation.state?.from?.pathname || "/"
 
     useEffect(()=>{
         loadCaptchaEnginge(6); 
